@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"] });
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={geist.className}>
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-8DQ33ST0PT" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8DQ33ST0PT');
+        `}</Script>
+      </head>
       <body className="min-h-screen bg-gray-50 text-gray-900" style={{ backgroundColor: '#f9fafb', color: '#111827' }}>
         <header className="bg-white border-b border-gray-200">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center gap-6">
