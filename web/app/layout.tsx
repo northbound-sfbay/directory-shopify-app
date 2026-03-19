@@ -6,9 +6,15 @@ import "./globals.css";
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shopify App Directory — Find the Best Shopify Apps",
+  title: "FindShopifyApps — Find the Best Shopify Apps",
   description:
     "Browse and compare 17,000+ Shopify apps by category, rating, and pricing. Find the best apps for your store.",
+  metadataBase: new URL("https://www.findshopifyapps.com"),
+  alternates: { canonical: "https://www.findshopifyapps.com" },
+  openGraph: {
+    siteName: "FindShopifyApps",
+    url: "https://www.findshopifyapps.com",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
