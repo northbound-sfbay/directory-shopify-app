@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Data files (large, regeneratable)
+enriched_apps.csv
+app_urls.csv
+shopify_domains.csv
+
+# Next.js
+web/.next/
+web/node_modules/
+web/.env.local
+
+# Logs
+*.log
+scrape_log.txt
+enrich_log.txt
